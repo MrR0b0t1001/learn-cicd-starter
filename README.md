@@ -27,3 +27,7 @@ You do _not_ need to set up a database or any interactivity on the webpage yet. 
 samael's version of Boot.dev's Notely app and mine is better.
 
 let's see if it will work..
+
+I can't for the life of me figure out the point of the formatting sector
+
+everyone uses auto formatting
