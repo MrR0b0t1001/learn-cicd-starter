@@ -25,7 +25,11 @@ func (cfg *apiConfig) handlerNotesGet(w http.ResponseWriter, r *http.Request, us
 	respondWithJSON(w, http.StatusOK, postsResp)
 }
 
-func (cfg *apiConfig) handlerNotesCreate(w http.ResponseWriter, r *http.Request, user database.User) {
+func (cfg *apiConfig) handlerNotesCreate(
+	w http.ResponseWriter,
+	r *http.Request,
+	user database.User,
+) {
 	type parameters struct {
 		Note string `json:"note"`
 	}
