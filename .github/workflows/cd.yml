@@ -41,5 +41,5 @@ jobs:
             --image us-central1-docker.pkg.dev/notely-458014/notely-ar-repo/notely:latest \
             --region us-central1 \
             --allow-unauthenticated \
-            --project ${{ secrets.GCP_PROJECT_ID }}
+            --project ${{ secrets.NOTELY_ID }} \
             --max-instances=4 \
