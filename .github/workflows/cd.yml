@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
     steps:
       - name: Check out Code
         uses: actions/checkout@v4
@@ -34,6 +37,9 @@ jobs:
 
       - name: Docker Build
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-458014/notely-ar-repo/notely:latest
+
+      - name: Run Migrations
+        run: ./scripts/migrateup.sh
 
       - name: Deploy Docker Image to Google Cloud Run
         run: |
